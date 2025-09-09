@@ -76,16 +76,16 @@
 <main class="container">
     <form action="{% url 'send' %}" method="post" class="form" enctype="multipart/form-data">
         {% csrf_token %}
-        <h1>Email analyser</h1>
-        <h2>Automatically categorizes emails into two classes — Productive or Unproductive — to help you focus on what really matters.</h2>
-        <label for="fileInput" class="button">Input file</label>
+        <h1>Analisador de E-mails</h1>
+        <h2>Classifica automaticamente e-mails em duas categorias — Produtivo ou Improdutivo — para ajudá-lo a focar no que realmente importa.</h2>
+        <label for="fileInput" class="button">Arquivo de entrada</label>
         <input id="fileInput" name="file" type="file" placeholder="File" style="display: none;" onchange="updateButtonText()"/>
         <div class="separatorContainer">
             <div class="separator"></div>
-            <p class="separatorText">Or</p>
+            <p class="separatorText">Ou</p>
             <div class="separator"></div>
         </div>
-        <textarea name="text" placeholder="Text" class="textArea"></textarea>
+        <textarea name="text" placeholder="Texto" class="textArea"></textarea>
 
         <button class="button" type="submit" style="margin-top: 10px; font-size: 15px;">Enviar</button>
     </form>
