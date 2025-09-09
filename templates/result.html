@@ -15,8 +15,20 @@
     *{
         font-family: "Roboto", sans-serif;
     }
+
+    .resultText{
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .resultContainer{
+        width: 50%;
+    }
 </style>
 
 <main class="container">
-    <p>{{ result }}</p>
+    <div class="resultContainer">
+        <p class="resultText">{{ result }}</p>
+    </div>
 </main>
