@@ -77,6 +77,20 @@ python3 manage.py runserver
 
 http://localhost:5000
 
+## Acessar via docker
+
+1. Fazer build da imagem
+
+```bash
+   docker build -t m-ai-l . 
+```
+
+2. Executar container
+
+```bash
+   docker run -p 8000:8000 m-ai-l 
+```
+
 🖥 Demonstração
 
 Vídeo: Link do vídeo demonstrativo
