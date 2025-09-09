@@ -1,5 +1,5 @@
 """
-ASGI config for email_analyser project.
+ASGI config for analyser project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

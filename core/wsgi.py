@@ -1,5 +1,5 @@
 """
-WSGI config for email_analyser project.
+WSGI config for analyser project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
