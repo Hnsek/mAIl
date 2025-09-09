@@ -1,12 +1,57 @@
-<form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-    <input type="file" placeholder="File"/>
-    <div style="display: flex; flex-direction: row; gap: 2; align-items: center;">
-        <div style="flex:1; height: 1; border-top: 2px; "></div>
-        <p>Or</p>
-        <div style="flex:1; height: 1; border-top: 2px; "></div>
-    </div>
-    <textarea name="text" placeholder="Text">
+<style>
 
-    </textarea>
-</form>
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .separator{
+        flex:1;  
+        border-top: 2px;
+        border-width: 2px;
+        background-color: #000; 
+        height: 1px;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2px;
+        
+    }
+
+    .separatorContainer{
+        width: 100%;
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .textArea{
+        width: 100%;
+        height: 100px;
+    }    
+    .separatorText{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+
+<main class="container">
+    <form action="{% url 'index' %}" method="post" class="form">
+        {% csrf_token %}
+        <h1>Email analyser</h1>
+        <h2>Automatically categorizes emails into two classes — Productive or Unproductive — to help you focus on what really matters.</h2>
+        <input type="file" placeholder="File"/>
+        <div class="separatorContainer">
+            <div class="separator"></div>
+            <p class="separatorText">Or</p>
+            <div class="separator"></div>
+        </div>
+        <textarea name="text" placeholder="Text" class="textArea"></textarea>
+    </form>
+</main>
