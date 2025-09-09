@@ -27,7 +27,10 @@ def send(request):
 
     prompt = 'Considerando um ambiente de trabalho, classifique de forma concisa o seguinte texto em: produtivo ou improdutivo. /n ' + text
     
-    response = AI.get_response(prompt)
+    result = AI.get_response(prompt)
     
-    return HttpResponse(response)
+    context = { 
+        "result": result
+        }
+    return render(request,'result.html', context)
 
