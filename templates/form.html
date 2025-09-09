@@ -42,19 +42,50 @@
     .textArea{
         width: 100%;
         height: 100px;
+        border-radius: 4px;
     }    
     .separatorText{
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    .button {
+        background-color: #6c5ce7;
+        color: white;
+        border: 2px solid #6c5ce7;
+        padding: 0.4em 0.8em;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #5245b1;
+        border-color: #5245b1;
+    }
 </style>
+
+<script>
+    function updateButtonText() {
+        const fileInput = document.getElementById('fileInput');
+        const label = document.querySelector('label[for="fileInput"]');
+        const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'Input file';
+        label.textContent = fileName;
+    }
+</script>
 
 <main class="container">
     <form action="{% url 'index' %}" method="post" class="form">
         {% csrf_token %}
         <h1>Email analyser</h1>
         <h2>Automatically categorizes emails into two classes — Productive or Unproductive — to help you focus on what really matters.</h2>
-        <input type="file" placeholder="File"/>
+        <label for="fileInput" class="button">
+            {% if file %}
+                Text
+            {% else %}
+                Input file
+            {% endif %}
+        </label>
+        <input id="fileInput" name="file" type="file" placeholder="File" style="display: none;" onchange="updateButtonText()"/>
         <div class="separatorContainer">
             <div class="separator"></div>
             <p class="separatorText">Or</p>
