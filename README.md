@@ -43,7 +43,7 @@ A solução foi desenvolvida como parte de um **case prático da AutoU**, simula
 ### Pré-requisitos
 
 - Python 3.9+ instalado
-- Pip ou Poetry
+- Pip
 - Conta/API Key da Google AI Studio(https://aistudio.google.com/apikey)
 
 ### Passos
@@ -93,8 +93,9 @@ http://localhost:5000
 
 🖥 Demonstração
 
-Vídeo: Link do vídeo demonstrativo
-Aplicação Online: https://mail-pboo.onrender.com/analyser/form
+[Link do vídeo demonstrativo](https://youtu.be/0D_lDkId0fs)
+
+[Aplicação Online](https://mail-pboo.onrender.com/analyser/form)
 
 ⚠️ Observações
 
@@ -102,6 +103,8 @@ Esta aplicação é um protótipo para demonstração do case prático da AutoU.
 Certifique-se de ter API Keys válidas caso utilize serviços de AI externos.
 
 Desenvolvido por: Henrique Sousa
+
 Contato: henrique2001sousa@gmail.com
+
 Linkedin: www.linkedin.com/in/henriquesousaleandro
 
