@@ -1,0 +1,12 @@
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <input type="file" placeholder="File"/>
+    <div style="display: flex; flex-direction: row; gap: 2; align-items: center;">
+        <div style="flex:1; height: 1; border-top: 2px; "></div>
+        <p>Or</p>
+        <div style="flex:1; height: 1; border-top: 2px; "></div>
+    </div>
+    <textarea name="text" placeholder="Text">
+
+    </textarea>
+</form>
